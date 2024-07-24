@@ -4,7 +4,7 @@ from faker import Faker
 import os
 
 fake = Faker()
-
+# test
 # Number of mock records
 num_employees = 100
 num_courses = 50
