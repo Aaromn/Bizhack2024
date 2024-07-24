@@ -96,3 +96,5 @@ goals_df.to_json(os.path.join(folder_name, 'mock_goals.json'), index=False)
 applications_df.to_json(os.path.join(folder_name, 'mock_applications.json'), index=False)
 
 print(f"Mock data saved to folder '{folder_name}'")
+
+# test
