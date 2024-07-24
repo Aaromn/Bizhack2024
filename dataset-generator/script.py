@@ -27,7 +27,8 @@ for _ in range(num_employees):
         # 'HRNotes': fake.paragraph(),
         'NumberOfLeaves': fake.random_int(min=0, max=30),
         'WorkfromHome': fake.random_int(min=0, max=15),
-        'Birthday': fake.date_of_birth(minimum_age=22, maximum_age=60)
+        'Birthday': fake.date_of_birth(minimum_age=22, maximum_age=60),
+        'Skills': [fake.random_element(elements=tech_data.skills) for _ in range(fake.random_int(min=1, max=5))]
     })
 employees_df = pd.DataFrame(employees)
 
@@ -40,8 +41,7 @@ for _ in range(num_courses):
         'CourseName': fake.random_element(elements=tech_data.courses),
         'CompletionStatus': fake.random_element(elements=('Completed', 'In Progress')),
         'DateOfEnrollment': fake.date_between(start_date='-1y', end_date='today'),
-        'DateOfCompletion': fake.date_between(start_date='-1y', end_date='today') if fake.random_element(elements=('Completed', 'In Progress')) == 'Completed' else None,
-        'Skills': [fake.random_element(elements=tech_data.skills) for _ in range(fake.random_int(min=1, max=5))]
+        'DateOfCompletion': fake.date_between(start_date='-1y', end_date='today') if fake.random_element(elements=('Completed', 'In Progress')) == 'Completed' else None
     })
 courses_df = pd.DataFrame(courses)
 
