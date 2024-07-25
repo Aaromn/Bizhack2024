@@ -8,3 +8,4 @@ run "**npm run dev**" to see the website
 ## InstepHackathonBackend
 
 It has the prototype for the prompts and recommendation logic for the frontend
+To run the backend api run "**python gemini.py**"
