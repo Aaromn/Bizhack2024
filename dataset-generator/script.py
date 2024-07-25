@@ -7,10 +7,10 @@ import tech_data
 fake = Faker()
 
 # Number of mock records
-num_employees = 100
-num_courses = 500
-num_goals = 200
-num_applications = 20
+num_employees = 10
+num_courses = 100
+num_goals = 10
+num_applications = 5
 
 # Generate Employee Profiles (combined with InfyMe)
 employees = []
